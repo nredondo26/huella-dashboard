@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-12">
+    <div class="card shadow-sm">
+      <div class="card-body text-center">
+        <h1 class="card-title">Bienvenido, {{ session.username }}</h1>
+        <p class="card-text">Utiliza el menú de navegación para acceder a las distintas secciones de la aplicación.</p>
+        <a href="{{ url_for('empleados') }}" class="btn btn-primary m-2">Ver Empleados</a>
+        <a href="{{ url_for('asistencias') }}" class="btn btn-secondary m-2">Ver Asistencias</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
